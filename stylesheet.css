@@ -1,0 +1,126 @@
+/* 
+ * r/Tanzania CSS
+ * 
+ * Designed by u/kamikazechaser
+ *
+ * v0.0.1 - 01/12/2020
+ *
+ */
+
+/* 1. Disable downvotes by non-subscribers */
+
+body:not(.subscriber) .arrow.down,
+body:not(.subscriber) .arrow.downmod {
+  pointer-events: none;
+  opacity: 0.2;
+}
+
+/* 2. Upvote/Downvote arrows */
+
+.arrow {
+  width: 26px;
+}
+
+.arrow.up {
+  background-image: url(%%up%%);
+  background-position: 0 0;
+}
+.arrow.upmod {
+  background-image: url(%%up-voted%%);
+  background-position: 0 0;
+}
+.arrow.down {
+  background-image: url(%%down%%);
+  background-position: 0 0;
+}
+.arrow.downmod {
+  background-image: url(%%down-voted%%);
+  background-position: 0 0;
+}
+
+/* 3. Karma indicators */
+
+.link .midcol {
+  width: 40px !important;
+}
+
+.link .score.likes {
+  color: #1eb53a;
+}
+.link .score.dislikes {
+  color: #d22419;
+}
+
+.linkinfo {
+  padding: 25px 10px;
+  border: 1px solid #ddd;
+  background: #fff;
+  text-align: center;
+
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+.linkinfo .score {
+  color: #777;
+}
+.linkinfo .score .number {
+  margin-right: 0.1em;
+}
+.linkinfo .score .number,
+.linkinfo .score .word {
+  color: #000;
+  font-weight: normal;
+  font-size: 1.8em;
+}
+.linkinfo .score .word {
+  margin-right: 0.2em;
+}
+
+.linkinfo .upvotes {
+  color: #1eb53a;
+}
+.linkinfo .downvotes {
+  color: #d22419;
+}
+
+/* 4. Sidebar buttons */
+
+.side {
+  font-weight: bold;
+  font-family: arial;
+}
+
+.morelink {
+  background: transparent !important;
+  border: none;
+  margin-bottom: 22px;
+}
+
+.morelink a {
+  color: #fff;
+  letter-spacing: 0px;
+  font-family: arial;
+  line-height: 41px;
+  height: 41px;
+  background-color: #00a3dd;
+  border-radius: 3px;
+  transition: 200ms;
+  text-transform: uppercase;
+}
+
+.morelink a:hover {
+  background-color: #66c8eb;
+  background-image: none;
+}
+
+.morelink .nub {
+  display: none;
+}
+
+.submit.mod-override .morelink a:after {
+  margin: 12px;
+  left: 75%;
+  top: 3%;
+}
